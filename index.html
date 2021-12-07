@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<meta charset="UTF-8" name="viewport" content="width=device-width, initial scale=1">-->
+    <meta charset="UTF-8" name="viewport" content="width=720, initial scale=1">
+    <title>Mike Wang</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/slideshowstyle.css">
+    <link rel="stylesheet" href="css/borders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        //This code was implemented from w3schools.com
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 0, function(){
+                window.location.hash = hash;
+              });
+            }
+          });
+        });
+        $(document).ready(function () {
+            $('div.hidden').fadeIn(2000).removeClass('hidden');
+            $('div.hidden2').delay(1500).fadeIn(1000).removeClass('hidden');
+        });
+    </script>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+
+        h1 {
+          font-size: 50px;
+          word-break: break-all;
+        }
+        
+        .row {
+          margin: 8px -16px;
+        }
+        
+        /* Add padding BETWEEN each column */
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+        
+        /* Create four equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 25%;
+        }
+        
+        /* Clear floats after rows */ 
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Content */
+        .content {
+          background-color: white;
+          padding: 10px;
+        }
+        
+        
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+          .column {
+            width: 50%;
+          }
+        }
+        
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+          }
+        }
+
+        img {
+            object-fit: cover;
+        }
+    </style>
+</head>
+    <body>
+        <div class="navigation-bar">
+            <a href="contact.html">CONTACT</a>
+            <a href="artwork.html">ARTWORK</a>
+            <a href="portfolioC.html">PORTFOLIO</a>
+            <a href="index.html">HOME</a>
+            <a href="index.html" style="float: left;">MIKE'S WEBSITE</a>
+        </div>
+
+        <header style="text-align: center;" id="home">
+            <div class="hidden">
+                <h1 style="font-size: 100px; color: #0a4d45; margin-top: 110px;"><b>I'm Mike Wang.</b></h1>
+            </div>
+            <div class="hidden2">
+                <p style="margin-bottom: 100px; color: #0f695f;">Computational Media Major at Georgia Tech.</p>
+            </div>
+            <div style="margin-bottom: 300px;"></div>
+        </header>
+        <div class="sbody" id="section2">
+            <div class="colorb">
+            <p style="padding: 10px; text-align: center"><b>2nd Year CM Major at Georgia Institute of Technology looking to do front-end UI/UX projects with multiple interests in back-end programming and art.</b></p>
+        </div>
+        <div class="gallery">
+        <div class="containert">
+            <img src="me.jpg" alt="Profile" class="image">
+            <div class="overlay-top">
+                <div class="text">
+                    <a class="styledlink" href="#section3">About Me</a>
+                </div>
+                <div class="text2">Hi! My full name is Zhixuan Wang, but I also go by Mike. More about me below!</div>
+            </div>
+        </div>
+        <div class="containerb">
+            <img src="images/javacoding.PNG" alt="Coding" class="image">
+            <div class="overlay-bot">
+                <div class="text">
+                    <a class="styledlink" href="portfolioC.html">Coding Projects</a>
+                </div>
+                <div class="text2">I have done multiple projects in a variety of languages.</div>
+            </div>
+        </div>
+        <div class="containert">
+            <img src="images/art1.jpeg" alt="Artwork" class="image">
+            <div class="overlay-top">
+                <div class="text">
+                    <a class="styledlink" href="artwork.html">Artwork</a>
+                </div>
+                <div class="text2">I use many different mediums, but I mainly focus on digital and pen.</div>
+            </div>
+        </div>
+        <div class="containerb">
+            <img src="yellowbg.jpg" alt="Avatar" class="image">
+            <div class="overlay-bot">
+                <div class="text">
+                    <a class="styledlink" href="contact.html">Contact</a>
+                </div>
+                <div class="text2">I have multiple contacts, including Instagram, LinkedIn, and Email.</div>
+            </div>
+        </div>
+        </div>
+        <div class="aboutmecontainer" style="background-color: white;" id="section3">
+            <h2 style="text-align: center; padding: 10px; color: #106359; font-size: 40px;"><u>Bio</u></h2>
+            <p style="padding-top: 0px; padding-left: 40px; padding-right: 40px; text-indent: 50px; font-size: 20px;">
+                Currently 19 years old, I have lived in the state of Georgia for 16 years. 
+                From the beginning of middle school, I was always interested in programming and its creative side to it, and currently, I am 
+                learning front-end programming as a way to expand upon those interests. In terms of coding experience, I have gone through six years of 
+                computer science education. I know Java, JavaScript, Python, and a moderate amount of HTML & CSS. 
+                This site holds the purpose to show my growth and achievements throughout my career here at Georgia Tech and beyond.
+            </p>
+            <div style="padding: 300px"></div>
+        </div>
+        <div class="footer" id="section4">
+            <p><u>Social Media</u></p>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </body>    
+</html>

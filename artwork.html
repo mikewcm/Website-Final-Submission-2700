@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Artwork</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/imggridstyle.css">
+    <script src="css/fadeInLoad.js"></script>
+<style>
+    body {
+        background-color: white;
+        background-image: none;
+    }
+
+    .container {
+        width: 100%;
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1; 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container:hover .overlay {
+         opacity: 1;
+    }
+    
+    img {
+        object-fit: cover;
+    }
+</style>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+
+
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+    
+    .row {
+      margin: 8px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: white;
+      padding: 10px;
+    }
+    
+</style>
+</head>
+    <body>
+        <div class="navigation-bar">
+            <a href="contact.html">CONTACT</a>
+            <a href="portfolioC.html">PORTFOLIO</a>
+            <a href="index.html">HOME</a>
+            <a href="index.html" style="float: left;">MIKE'S WEBSITE</a>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="container">
+                    <img src="images/scene_2.png" style="width:100%; cursor:pointer" class="image" onclick="onClick(this)">
+                    <div class="overlay">March 17, 2021</div>
+                </div>
+                <div class="container">
+                    <img src="images/skull_1.jpeg" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">August 9th, 2021</div>
+                </div>
+                <div class="container">
+                    <img src="images/apple.jpg" style="width:100%;cursor: pointer"onclick="onClick(this)">
+                    <div class="overlay">August 9th, 2020</div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="container">
+                    <img src="images/arm_1.jpeg" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">August 6th, 2021</div>
+                </div>
+                <div class="container">
+                    <img src="images/a_8_30.jpeg" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">August 30th, 2020</div>
+                </div>
+                <div class="container">
+                    <img src="images/date_10_1.JPEG" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">October 1st, 2021</div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="container">
+                    <img src="images/a_10_28.png" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">December 28th, 2020</div>
+                </div>
+                <div class="container">
+                    <img src="images/processed.jpeg" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">August 9th, 2020</div>
+                </div>
+                <div class="container">
+                    <img src="images/date_10_8.jpeg" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">October 8th, 2021</div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="container">
+                    <img src="images/a_4_13.png" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">April 13th, 2020</div>
+                </div>
+                <div class="container">
+                    <img src="images/art1.jpeg" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">January 4th, 2019</div>
+                </div>
+                <div class="container">
+                    <img src="images/date_7_20.jpeg" style="width:100%; cursor:pointer" onclick="onClick(this)">
+                    <div class="overlay">July 20th, 2021</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom">
+              <img id="img01" style="width:100%">
+            </div>
+        </div>
+        <script>
+            function onClick(element) {
+              document.getElementById("img01").src = element.src;
+              document.getElementById("modal01").style.display = "block";
+            }
+        </script>
+   </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      //This code was implemented from w3schools.com
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 0, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+      $(document).ready(function () {
+          $('div.hidden').fadeIn(2000).removeClass('hidden');
+      });
+  </script>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+
+        h1 {
+          font-size: 50px;
+          word-break: break-all;
+        }
+        
+        .row {
+          margin: 8px -16px;
+        }
+        
+        /* Add padding BETWEEN each column */
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+        
+        /* Create four equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 25%;
+        }
+        
+        /* Clear floats after rows */ 
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Content */
+        .content {
+          background-color: white;
+          padding: 10px;
+        }
+        
+    </style>
+</head>
+    <body>
+        <div class="navigation-bar">
+            <a href="contact.html">CONTACT</a>
+            <a href="artwork.html">ARTWORK</a>
+            <a href="portfolioC.html">PORTFOLIO</a>
+            <a href="index.html">HOME</a>
+            <a href="index.html" style="float: left;">MIKE'S WEBSITE</a>
+        </div>
+        <h1 style="text-align: center; font-size: 60px; color: #148577;"><b>Contact Information<b></h1>
+        <div class="cbody">
+          <div class="hidden">
+            <p style="margin-bottom: 0px; background-color: #277367">Social Media</p>
+            <a href="https://www.instagram.com/adach_yi/" style="font-size: 80px"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/zhixuan-mike-wang-73840619b/" style="font-size: 80px"><i class="fa fa-linkedin"></i></a>
+            <p style="margin-bottom: 0px; background-color: #277367; margin-top: 10px">General Contact</p>
+            <p style="text-align: center; color: #27742F; font-size: 20px">Student Email: zwang3122@gatech.edu</p>
+            <p style="text-align: center; color: #27742F; font-size: 20px">General Email: wangzhxn0@gmail.com</p>
+            <p style="text-align: center; color: #27742F; font-size: 20px">Phone: (1)678-577-7161</p>
+            <p style="margin-bottom: 0px; background-color: #277367; margin-top: 10px">Current Classes</p>
+            <p style="text-align: center; color: #27742F; font-size: 20px">MATH 1554: Linear Algebra</p>
+            <p style="text-align: center; color: #27742F; font-size: 20px">CS 1331: Intro to Object Oriented Programming</p>
+            <p style="text-align: center; color: #27742F; font-size: 20px">LMC 2700: Intro to Computational Media</p>
+            <p style="text-align: center; color: #27742F; font-size: 20px">CS 1100: Transfer CS Leap Seminar</p>
+            <p style="margin-bottom: 0px; background-color: #277367; margin-top: 10px">Resume</p>
+            <a style="text-align: center; color: #27742F; font-size: 20px" href="gtres.pdf">Click Here to View Resume</p>
+            
+        </div>
+    </body>
+</html>
