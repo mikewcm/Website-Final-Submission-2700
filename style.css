@@ -133,3 +133,15 @@ a.styledlink:visited {
 a.styledlink:hover {
     color:rgb(3, 28, 48);
 }
+
+a.styledlink2:link {
+    color:#1e5a51;
+    text-decoration:none;
+}
+a.styledlink2:visited {
+    color:#1e5a51;
+    text-decoration:none;
+}
+a.styledlink2:hover {
+    color:azure;
+}
